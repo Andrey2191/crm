@@ -6,7 +6,6 @@ import './orderForm.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAddressSuggestions, selectAddress, selectSuggestions, clearSuggestions, createOrder, selectOrderCost, selectTotalCost } from '../../features/orders/orderSlice';
 import { AppDispatch } from '../../store';
-import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
 import { CopyIcon } from '@chakra-ui/icons';
 import {
