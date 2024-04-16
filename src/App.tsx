@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import OrderTable from './components/OrderTable/OrderTable';
+import OrderForm from './components/OrderForm/OrderForm';
+import { useSelector } from 'react-redux';
+import { RootState } from './store';
 
 function App() {
+  const orders = useSelector((state: RootState) => state.orders.orders)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<OrderTable orders={orders} />} />
+          <Route path="/order" element={<OrderForm />} />
+        </Routes>
+      </div>
+    </Router>
+
   );
 }
 

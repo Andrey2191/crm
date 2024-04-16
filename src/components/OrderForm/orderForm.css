@@ -1,0 +1,29 @@
+.date-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestions-container {
+    position: relative;
+}
+
+.suggestions-list {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none; 
+    z-index: 10; 
+}
+
+.suggestions-list li {
+    list-style-type: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
+}

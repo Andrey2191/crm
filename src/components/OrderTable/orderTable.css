@@ -1,0 +1,14 @@
+.order-table{
+    padding: 40px;
+}
+
+.order-table-header{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-table-header h2{
+    font-size: 24px;
+    font-weight: 600;
+}
